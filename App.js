@@ -5,25 +5,7 @@ import {MapView} from 'expo';
 
 
 
-class DeliveryScreen extends React.Component {
-
-  componentDidMount(){
-    return fetch('https://facebook.github.io/react-native/movies.json')
-      .then((response) => response.json())
-      .then((responseJson) => {
-
-        this.setState({
-          dataSource: responseJson.movies,
-        }, function(){
-
-        });
-
-      })
-      .catch((error) =>{
-        console.error(error);
-      });
-  }
-
+class DeliveryScreen extends React.Component { 
 
   render() {
     return (
@@ -47,7 +29,7 @@ class DeliveryScreen extends React.Component {
             }}
       />
         <ScrollView style ={{flex:1}}>
-            <ol> {responseJson.movies} </ol>
+         
             
         </ScrollView>
 
